@@ -1,0 +1,19 @@
+def txt_file_procedures(option, link):
+    if option == 'Load':
+
+        print('Loading list file: ', txt_link_path)
+
+        with open(txt_link_path, "r") as load:
+            data = load.read()
+            data_list = data.split("\n")
+
+            for element in data_list:
+                product_list.append(element)
+
+    elif option == 'Update':
+
+        print('Updating list file: ', txt_link_path)
+
+        with open(txt_link_path, "w") as update:
+            for item in product_list:
+                update.write(item + "\n")
